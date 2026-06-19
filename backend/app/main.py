@@ -1,5 +1,6 @@
 from fastapi import FastAPI # Import FastAPI
 from fastapi.middleware.cors import CORSMiddleware # Imports CORS middleware 
+from .routes import router
 # FastAPI:  like engine for websites
 # CORS middleware:  like agent who says: browser! he's working with FastAPI
 
@@ -14,4 +15,4 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    return{"message: KalKro Backend works."}
+    return{"message": "KalKro Backend works."}

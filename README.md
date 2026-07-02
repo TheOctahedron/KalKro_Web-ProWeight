@@ -54,12 +54,12 @@ npm install
 ---
 **If everything is successful**, here's what to paste into the browser: 
 
-**For the backend: **
+**For the backend:**
 ```bash
 http://localhost:8000
 ```
 
-**For the frontend: **
+**For the frontend:**
 ```bash
 http://localhost:5173
 ```

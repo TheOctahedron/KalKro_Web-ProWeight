@@ -1,4 +1,4 @@
-# KalKro Web 0.2
+# KalKro Web 0.2  (NOT FUNCTIONAL AT THE MOMENT)
 
 **Hello, I expand my path, and smoothly proceed to the Full-Stack (including: React, FastAPI, etc...)**
 

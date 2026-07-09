@@ -1,10 +1,15 @@
+# WEB 
 from fastapi import APIRouter
-from programs.installer import show_programs, install_program, all_disks, found_disks, found_program
-
-from programs.randomizer import random_number
-from programs.garbage_truck import delete_program
+# ===========================
+# APPS
+from programs.apps.installer import show_programs, install_program, all_disks, found_disks, found_program
+from programs.apps.boring_calculator import boring_plus, boring_minus, boring_division, boring_multiplication, boring_absurdabsurd
+from programs.apps.randomizer import random_number
+from programs.apps.garbage_truck import delete_program
+# ===========================
+# USERS DATA
 from datas.users import new_user
-
+# ===========================
 
 router = APIRouter()
 
@@ -61,6 +66,39 @@ def delete_my_program(un_program: int):
 
 
 # ================================== APPS ==================================
-@router.get("/system/randomizer/random/{number}") 
+
+# Randomizer
+@router.get("/system/randomizer/random/{number}")  # Gives a random number from 1 to the selected one.
 def my_random_number(number: int):
-    return random_number
+    return random_number(number)
+# ==========
+
+
+
+
+# B-Calculator
+@router.get("/system/b_calculator/plus/{numbers}") # PLUS
+def my_boring_plus(numbers: int):
+    return boring_plus(numbers) 
+
+
+@router.get("/system/b_calculator/minus/{numbers}") # MINUS
+def my_boring_minus(numbers: int):
+    return boring_minus(numbers) 
+
+
+@router.get("/system/b_calculator/division/{numbers}") # DIVISON
+def my_boring_division(numbers: int):
+    return boring_division(numbers) 
+
+
+@router.get("/system/b_calculator/multiplication/{numbers}") # MULTIPLICATION 
+def my_boring_multiplication(numbers: int):
+    return boring_multiplication(numbers) 
+
+
+@router.get("/system/b_calculator/absurdabsurd/{numbers}") # ABSURDABSURD
+def my_boring_absurdabsurd(numbers: int):
+    return boring_absurdabsurd(numbers) 
+# ==========
+
